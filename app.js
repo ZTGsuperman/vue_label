@@ -39,14 +39,14 @@ var filter={
 }
 
 var vm=new Vue({
-    el:".main",
-    data: {
-        list: list,
-        todo:"",
-        edtorTodos:"",
-        beforeTitle:"",
-        visibility:"all"
-    },
+        el:".main",
+        data: {
+            list: list,
+            todo:"",
+            edtorTodos:"",
+            beforeTitle:"",
+            visibility:"all"
+        },
     watch:{
         list:{
             handler:function(){   ////监控list这个属性，当这个属性对应的值发生变化就会执行函数
@@ -64,7 +64,6 @@ var vm=new Vue({
         filterList:function(){
             return filter[this.visibility]?filter[this.visibility](list):list
         }
-
     },
     methods: {
         addTodo(){
